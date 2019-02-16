@@ -8,11 +8,11 @@ class MyConnection(object):
         msg = ""
         while True:
             msg = self.MySocket.recv(7).decode('latin_1')
-        if ord(msg[len(msg)-1]) == 0x21:
-            return msg
+            if ord(msg[len(msg)-1]) == 0x21:
+                return msg
 
     def send_msg(self, msg):
-        self.MySocket.sendall(msg.encode())
+        self.MySocket.sendall(msg.encode('latin_1'))
 
     def close_socket(self):
         self.MySocket.close()

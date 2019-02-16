@@ -7,15 +7,12 @@ class MyConnection(object):
     def get_msg(self):
         msg = ""
         while True:
-            it = self.MySocket.recv(7).decode('latin_1')
-            msg += it
-            for i in it:
-               if i == chr(0x21):
-                   return msg
+            msg = self.MySocket.recv(7).decode('latin_1')
+        if ord(msg[len(msg)-1]) == 0x21:
+            return msg
 
     def send_msg(self, msg):
         self.MySocket.sendall(msg.encode())
 
     def close_socket(self):
         self.MySocket.close()
-

@@ -30,6 +30,3 @@ def get_prime_factor(port):
             value = factor
         factor += 1
     return value
-
-def map_bin2int(msg):
-    return map(lambda x : int(x,2), msg)

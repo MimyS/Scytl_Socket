@@ -12,9 +12,9 @@ def remove_space(msg):
 def upper_lower(msg):
     length = len(msg)
     out_msg = ''
-    for i in range(0, length, 2):
-        out_msg += msg[i].upper() + msg[i].lower() # even2upper - odd2lower - 0 is even
-    if not length%2: # if even to upper last char
+    for i in range(0, length-1, 2):
+        out_msg += msg[i].upper() + msg[i+1].lower() # even2upper - odd2lower - 0 is even
+    if length%2: # if even to upper last char
         out_msg += msg[length-1].upper()
     return out_msg
 

@@ -7,7 +7,7 @@ class MyConnection(object):
     def get_msg(self):
         msg = ""
         while True:
-            msg = self.MySocket.recv(7).decode('latin_1')
+            msg += self.MySocket.recv(7).decode('latin_1')
             if ord(msg[len(msg)-1]) == 0x21:
                 return msg
 

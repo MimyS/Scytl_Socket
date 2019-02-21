@@ -13,13 +13,13 @@ def main():
         if i.lower() == '-h':
             print("\n~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~\n")
             print("Socket Development Test by Emily Souza")
-            print("\nThe program was developed using python 3.7 and do NOT work with versions older than 3.6")
+            print("\nThe program was developed using python 3.7 and does NOT work with versions older than 3.6")
             print("\nCommands:\n")
             print("-p,  change the port number (default 50029)")
             print("-a,  change the IP address (default '189.6.76.118')")
             print("-h,  display this help text and exit (ignoring others setting options)")
             print("-i,  display the program introduction right before running")
-            print("\nMore informations avaliable (in portuguese) at the README file")
+            print("\nMore information avaliable (in portuguese) in the README file")
             print("\n~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~\n")
             return
         elif nxt_port:
@@ -27,7 +27,7 @@ def main():
             nxt_port = False
             default_port = False
         elif nxt_ip:
-            ip = i
+            IP = i
             nxt_ip = False
             default_ip = False
         elif i.lower() == '-p':
@@ -38,10 +38,10 @@ def main():
             print("\n~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~//~~~~\n")
             print("Socket Development Test for the internship selection process of Scytl - Innovating Democracy.")
             print("Developer: Emily Souza\n")
-            print("The program was developed using python 3.7 and do NOT work with versions older than 3.6\n")
+            print("The program was developed using python 3.7 and does NOT work with versions older than 3.6\n")
             print("The main functionalities are:")
             print("1) Connecting to Scytl's Server using the IP Address '189.6.76.118' and port 50029")
-            print("2) Receiving packets from de server encoded using \"Protocol X\"")
+            print("2) Receiving packets from the server encoded using \"Protocol X\"")
             print("3) Decoding the message to obtain the original one")
             print("4) Changing spaces to underlines and strings to lower and upper characters")
             print("5) Inverting the message")
